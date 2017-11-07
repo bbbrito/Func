@@ -20,6 +20,35 @@ int main()
 	cuboPorReferencia(a);
 	cout << "O cubo do numero eh: " << a;
 
+/* Atividade função rand */
+    int i;
+    int number;
+    int contPar = 0;
+    int contImpar = 0;
+    int somaPar = 0;
+    int somaImpar = 0;
+    for (i = 1; i <= 10; i++)
+    {
+        number = 1 + (rand() % 10);
+        cout << "Número: " << number << '\n';
+        if (number % 2 == 0)
+        {
+            contPar++;
+            somaPar += number;
+        }
+        else
+        {
+        contImpar++;
+        somaImpar += number;
+        }
+
+    }
+    cout << "Número de pares: " << contPar << '\n';
+    cout << "Número de ímpares: " << contImpar << '\n';
+    cout << "Média pares: " << somaPar / contPar << '\n';
+    cout << "Média ímpares: " << somaImpar / contImpar << '\n';
+    
+    system ("pause");  
     return 0;
 }
 
